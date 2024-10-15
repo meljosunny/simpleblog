@@ -1,0 +1,16 @@
+
+<form class="container max-w-sm mx-auto mt-14 bg-gray-100 p-6 rounded-lg shadow" #form="ngForm" (ngSubmit)="onsubmit()">
+    <div class="mb-5">
+        <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+        <input type="text" id="title" name="Title" #Title="ngModel" [(ngModel)]="data.title" placeholder="enter Title" class="block w-full p-2 border border-gray-300 rounded-lg bg-gray-50 text-base form-control" required>
+    </div>
+    <div class="mb-5">
+        <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Content</label>
+        <textarea id="content" name="Content" rows="4" #Content="ngModel" [(ngModel)]="data.content" placeholder="enter Content" class="block w-full p-2 border border-gray-300 rounded-lg bg-gray-50 text-base form-control" required></textarea>
+    </div>
+    <div class="mb-5">
+        <label for="tags" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tags</label>
+        <input type="text" id="tags" name="Tags" #Tags="ngModel" [(ngModel)]="data.tags" placeholder="enter Tags (comma-separated)" class="block w-full p-2 border border-gray-300 rounded-lg bg-gray-50 text-base form-control">
+    </div>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+</form>

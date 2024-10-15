@@ -1,0 +1,13 @@
+<div class="container mx-auto px-4 mt-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div *ngFor="let i of data">
+            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4">
+                <!-- <h1>{{ i.id }}</h1> -->
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ i.title }}</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">{{ i.content }}</p>
+                <p class="font-bold text-gray-700 dark:text-gray-400">{{ i.tags }}</p>
+                <button (click)="view(i.id)" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View More</button>
+            </div>
+        </div>
+    </div>
+</div>

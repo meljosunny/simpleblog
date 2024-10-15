@@ -1,0 +1,25 @@
+<div class="h-screen bg-white flex items-center justify-center"> 
+    <div style="width: 600px;" class="bg-blue-200 p-6 rounded-lg shadow-md">
+        <div class="flex flex-col items-center space-y-4 "> 
+          <div *ngIf="isAuthenticated==true">
+            <button type="button" [routerLink]="['add']" class="max-w-xs w-full px-4 py-4 m-1 text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+              Add Blog
+            </button>
+            <button type="button" [routerLink]="['view']" class="max-w-xs w-full px-4 py-3 m-1 text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                View Blog
+            </button>
+            <button type="button" (click)="logout()" class="max-w-xs w-full px-4 py-3 m-1 text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+              Logout
+            </button>
+          </div>
+          <div *ngIf="isAuthenticated==false">
+            <button type="button" [routerLink]="['register']" class="max-w-xs w-full px-4 py-3 m-1 text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+              Register
+            </button>
+            <button type="button" [routerLink]="['login']" class="max-w-xs w-full px-4 py-3 m-1 text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+              Login
+            </button>
+          </div>
+        </div>
+    </div>
+</div>
